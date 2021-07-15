@@ -1,12 +1,13 @@
 training: !!bool "true"
 device: "cuda"
-unprocessed_data: './TIMIT/*/*/*/*.wav'
+# unprocessed_data: './TIMIT/*/*/*/*.wav'
+unprocessed_data: '../secure-robotic-delivery-system/ghostnet/data/timit/data/*/*/*/*.wav'
 ---
 data:
     train_path: './train_tisv'
-    train_path_unprocessed: './TIMIT/TRAIN/*/*/*.wav'
+    train_path_unprocessed: '../secure-robotic-delivery-system/ghostnet/data/timit/data/TRAIN/*/*/*.wav'
     test_path: './test_tisv'
-    test_path_unprocessed: './TIMIT/TEST/*/*/*.wav'
+    test_path_unprocessed: '../secure-robotic-delivery-system/ghostnet/data/timit/data/TEST/*/*/*.wav'
     data_preprocessed: !!bool "true" 
     sr: 16000
     nfft: 512 #For mel spectrogram preprocess
